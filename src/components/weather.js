@@ -3,20 +3,21 @@ import React from "react";
 class Weather extends React.Component {
     render(){
         return (
-            <div>
+            <div className="weather__infobox">
                {
                    this.props.info.name &&
-                   <div>
+                   <div className="weather__infobox--items">
                     <p>City : {this.props.info.name} , Country : {this.props.info.country}</p>
-                    <p>Temperature : {this.props.info.temp}</p>
+                    <p>Temperature : {this.props.info.temp} °C</p>
                     <p>Humidity : {this.props.info.humidity} %</p>
-                    <p>Wind : {this.props.info.wind}</p>
-                    <p>Sunrise : {this.props.info.sunrise} </p>
-                    <p>Sunset : {this.props.info.sunset}</p>
+                    <p>Wind : {this.props.info.wind} m/s</p>
                    </div>
                }
             </div>
         );
+    }
+    gettingDay = () =>{
+        //TO DO
     }
 }
 
