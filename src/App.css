@@ -11,13 +11,15 @@ body{
   background-repeat: no-repeat;
 }
 *{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Rubik', sans-serif;*/
 }
 .wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 70%;
+  height: 500px;
 }
 .header__title{
 font-size: 50px;;
@@ -27,7 +29,7 @@ font-size: 50px;;
 }
 input{
   border: 2px solid rgba(220,220,220,1);
-    color: #4CAF50;
+    color: #000;
     font-size: 16px;
     box-shadow: 1px 1px 3px 1px rgba(200,200,200, 0.2) inset;
     /* background-color: rgba(52, 152, 219, 0.1); */
@@ -65,10 +67,20 @@ button{
 }
 .weather__infobox{
   margin-top:30px;
-  font-size:20px;
+  font-size:25px;
+  font-family: 'Poppins', sans-serif;
 }
 .wrapper{
   color:#fff;
   padding:40px;
   background: rgba(0,0,0,0.7);
+}
+.weather__items--info{
+  
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.weather__items--info p {
+  margin-bottom: 0;
 }

@@ -1,0 +1,18 @@
+{
+    "plugins": [
+        "react"
+      ],
+    "parser": "babel-eslint",
+    "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb-base"
+    ],
+    
+    "rules":{ "linebreak-style": 0,
+      "import/no-cycle": "error",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
+     }
+    
+  }
