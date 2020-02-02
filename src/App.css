@@ -84,3 +84,12 @@ button{
 .weather__items--info p {
   margin-bottom: 0;
 }
+.clock--time{
+  font-size:40px;
+}
+.clock--day , .clock--month{
+  font-size: 20px;
+}
+.clock{
+  margin-top:30px;
+}

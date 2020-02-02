@@ -1,42 +1,40 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
+import moment from 'moment';
 
 class Clock extends React.Component {
     state = {
-      hours: undefined,
-      minutes: undefined,
-      seconds: undefined,
+      time: undefined,
+      day: undefined,
+      month: undefined,
     }
 
-    changingTime = (h, m, s) => {
+    changingTime = (t, d, m) => {
       this.setState({
-        hours: h,
-        minutes: m,
-        seconds: s,
+        time: t,
+        day: d,
+        month: m,
       });
     }
 
-    startClock = (func) => {
-      const data = new Date();
-      setTimeout(function run() {
-        func(data.getHours(), data.getMinutes(), data.getSeconds());
-        setTimeout(run, 1000);
+    startClock = () => {
+      setInterval(() => {
+        this.changingTime(moment().format('HH:mm:ss'), moment().format('dddd'), moment().format('MMMM Do YYYY'));
       }, 1000);
     }
 
     render() {
       if (this.state.hours === undefined) {
-        this.startClock(this.changingTime);  
+        this.startClock();
       }
       return (
             <div className="clock">
-        <p className="clock--hours">{this.state.hours}</p>
-        <p className="clock--minutes">{this.state.minutes}</p>
-        <p className="clock--seconds">{this.state.seconds}</p>
+              <p className="clock--time">{this.state.time}</p>
+              <p className="clock--day">{this.state.day}</p>
+              <p className="clock--month">{this.state.month}</p>
             </div>
       );
     }
 }
 
 export default Clock;
-

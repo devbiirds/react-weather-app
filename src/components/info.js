@@ -10,7 +10,7 @@ class Info extends React.Component {
     return (
             <div className="header">
                 <h2 className="header__title">Weather App</h2>
-                <p className="header__info">Узнайте погоду в вашем городе</p>
+                <p className="header__info">Find out the weather in your city</p>
                 <Clock/>
             </div>
     );
